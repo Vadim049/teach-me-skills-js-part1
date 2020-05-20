@@ -10,7 +10,12 @@ function task1(num) {
         surname: 'Trololo',
     };
     // ваш код должен быть ниже этой строки
-if ()
+    for (const key in obj){
+        if (typeof(obj[key])==="number"){
+            obj[key]*=num
+
+        }
+    }
     // ваш код должен быть выше этой строки
     return obj;
 }
@@ -28,7 +33,9 @@ function task2(num) {
         e: 5,
     };
     // ваш код должен быть ниже этой строки
-
+for ( const key in obj){
+    sum+=obj[key]
+}
     // ваш код должен быть выше этой строки
     return sum;
 }
@@ -40,7 +47,11 @@ function task2(num) {
 function task3(obj, property) {
     let result = null;
     // ваш код должен быть ниже этой строки
-
+for(const key in obj){
+    if( key===property){
+        result=true
+    }
+}
     // ваш код должен быть выше этой строки
     return result;
 }
@@ -51,7 +62,9 @@ function task3(obj, property) {
 function task4(obj) {
     const result = {};
     // ваш код должен быть ниже этой строки
-
+for(const key in obj){
+    result[key]=obj[key]
+}
     // ваш код должен быть выше этой строки
     return result;
 }
@@ -63,6 +76,19 @@ function task4(obj) {
 function task5(obj1, obj2) {
     let result = null;
     // ваш код должен быть ниже этой строки
+let count=null;
+for(const key in obj1){
+    count++
+}
+for(const key in obj2){
+    result++
+}
+if(count>result){
+    result=1
+}
+else{
+    result=2
+}
 
     // ваш код должен быть выше этой строки
     return result;
@@ -73,7 +99,9 @@ function task5(obj1, obj2) {
  */
 function task6(obj) {
     // ваш код должен быть ниже этой строки
-
+for( const key in obj){
+    delete obj[key]
+}
     // ваш код должен быть выше этой строки
     return obj;
 }
@@ -84,12 +112,15 @@ function task6(obj) {
  */
 function task7(obj) {
     // ваш код должен быть ниже этой строки
+    let array=[];
+    array=Object.keys(obj)
+    for( i=0; i<array.length; i++) {
+        console.log(array[i]);
+    }
 
     // ваш код должен быть выше этой строки
 
-    for(/* написать условие */) {
-        console.log();
-    }
+
 }
 
 /**
@@ -106,7 +137,8 @@ function task7(obj) {
 function task8(obj, str) {
     let result = null;
     // ваш код должен быть ниже этой строки
-
+    obj.message='hello '
+    result=obj.message+str
     // ваш код должен быть выше этой строки
     return result;
 }
@@ -118,7 +150,10 @@ function task8(obj, str) {
 function task9() {
     const array = [];
     // ваш код должен быть ниже этой строки
+for(let i=0 ; i< arguments.length; i++){
+    array[i]=arguments[i]
 
+}
     // ваш код должен быть выше этой строки
     return array;
 }
