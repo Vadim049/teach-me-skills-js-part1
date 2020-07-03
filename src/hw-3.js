@@ -25,6 +25,7 @@ function task1(str) {
 function task2(str) {
     let result = '';
     result = str.match(/[A-Z && a-z]/g);
+    result+=''
 
     return result;
 }
