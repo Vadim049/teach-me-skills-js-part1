@@ -76,20 +76,12 @@ for(const key in obj){
 function task5(obj1, obj2) {
     let result = null;
     // ваш код должен быть ниже этой строки
-let count=null;
-for(const key in obj1){
-    count++
-}
-for(const key in obj2){
-    result++
-}
-if(count>result){
+if(Object.values(obj1)>Object.values(obj2)){
     result=1
 }
 else{
     result=2
 }
-
     // ваш код должен быть выше этой строки
     return result;
 }
@@ -137,7 +129,7 @@ function task7(obj) {
 function task8(obj, str) {
     let result = null;
     // ваш код должен быть ниже этой строки
-    obj.message='hello '
+
     result=obj.message+str
     // ваш код должен быть выше этой строки
     return result;
@@ -156,4 +148,20 @@ for(let i=0 ; i< arguments.length; i++){
 }
     // ваш код должен быть выше этой строки
     return array;
+}
+
+
+function callStack(callback){
+
+
+}
+
+function test1(){
+    console.log(1)
+}
+function test2(){
+    console.log(2)
+}
+function test3(){
+    console.log(3)
 }
